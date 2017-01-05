@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MeditationforBoern</string>
+    <string name="text1">Kropsscannings meditationer.</string>
+    <string name="chooseMeditationButton">Vælg meditation</string>
+    <string name="kropsscanning5">Kropsscanning</string>
+    <string name="kropsscanning5Beskrivelse">Denne meditation varer 5 minutter. Læg dig ned, luk øjnene og slap helt af. Tænk på de næste 5 minutter
+    som en pause fra din hverdag, hvor du ikke behøver at tænke på noget som helst. Du kan bare ligge og slappe af til denne optagelse</string>
+</resources>
