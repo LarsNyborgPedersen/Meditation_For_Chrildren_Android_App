@@ -1,17 +1,11 @@
 <resources>
 
     //com.larsnyborgpedersen.meditationforboern2.MainActivity
-    <string name="app_name">Meditation for Børn</string>
+    <string name="app_name">Meditation for Børn Gratis</string>
+    <string name="mainActivityHeadline">Meditation for Børn</string>
     <string name="chooseMeditationScreenButtonText">Guidede meditationer</string>
     <string name="chooseMeditationScreenButtonText2">Hvordan mediterer man?</string>
     <string name="chooseMeditationScreenButtonText3">Kontakt</string>
-    <string name="banner_ad_unit_id">ca-app-pub-4795590606386947/2673903997</string>
-    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_test_google">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="app_id">ca-app-pub-4795590606386947~6587420234</string>
-    <string name="app_id_test"> ca-app-pub-3940256099942544/6300978111 </string>
-    <string name="app_id_test_google">ca-app-pub-3940256099942544~3347511713</string>
-
 
     //ChooseMeditationScreen
     <string name="chooseMeditation">Hvilken Meditation?</string>
