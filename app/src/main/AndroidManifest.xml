@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.larsnyborgpedersen.meditationforboern">
+    package="com.larsnyborgpedersen.meditationforboern2">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+        android:name="com.larsnyborgpedersen.meditationforboern2.Delay"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="com.larsnyborgpedersen.meditationforboern2.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseMeditationScreen" />
-        <activity android:name=".BodyScan5Minutes" />
-        <activity android:name=".MediaPlayerFunctions"></activity>
+
+        <activity android:name="com.larsnyborgpedersen.meditationforboern2.MeditationMediaPlayer" />
+        //android:theme="@style/AppTheme"
+        //android:configChanges="orientation"
+        //android:screenOrientation="portrait"
+
     </application>
 
 </manifest>
