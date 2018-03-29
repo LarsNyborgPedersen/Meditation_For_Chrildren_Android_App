@@ -29,7 +29,7 @@ public class MeditationScreen extends AppCompatActivity {
     }
 
     public void setText(){
-        switch (ChooseMeditationScreen.whichMeditation){
+        switch (ChooseMeditationScreenBase.whichMeditation){
 
             case "visualization":
                 headline.setText(getResources().getString(R.string.visualizationHeadline));
@@ -73,7 +73,7 @@ public class MeditationScreen extends AppCompatActivity {
 
     // Method for initialize the values
     public void init(){
-        switch (ChooseMeditationScreen.whichMeditation){
+        switch (ChooseMeditationScreenBase.whichMeditation){
             case "visualization":
                 meditationMediaPlayer = new MeditationMediaPlayer (MediaPlayer.create(MeditationScreen.this, R.raw.visualization_7_min));
                 break;

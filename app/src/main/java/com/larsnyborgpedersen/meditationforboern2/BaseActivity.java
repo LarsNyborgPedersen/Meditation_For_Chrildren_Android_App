@@ -3,19 +3,23 @@ package com.larsnyborgpedersen.meditationforboern2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.InterstitialAd;
 
-public class MainActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
 
     //Variables
     private Button chooseMeditationScreenButton, chooseHowToMeditateScreenButton, chooseContactScreenButton;
-    private AdView mAdView;
+    AdView mAdView;
+    public static InterstitialAd mInterstitialAd;
+
 
 
 
@@ -24,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         buttons();
         ad();
+        ad2();
 
 
     }
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent chooseMeditationScreenIntent = new Intent(MainActivity.this, ChooseMeditationScreen.class);
+                Intent chooseMeditationScreenIntent = new Intent(BaseActivity.this, ChooseMeditationScreen.class);
                 startActivity(chooseMeditationScreenIntent);
 
             }
@@ -51,14 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
         chooseHowToMeditateScreenButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent chooseHowToMeditateScreenIntent = new Intent(MainActivity.this, HowToMeditateScreen.class);
+                Intent chooseHowToMeditateScreenIntent = new Intent(BaseActivity.this, HowToMeditateScreen.class);
                 startActivity(chooseHowToMeditateScreenIntent);
             }
         });
 
         chooseContactScreenButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent chooseContactScreenIntent = new Intent(MainActivity.this, ContactScreen.class);
+                Intent chooseContactScreenIntent = new Intent(BaseActivity.this, ContactScreen.class);
                 startActivity(chooseContactScreenIntent);
             }
         });
@@ -66,13 +70,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void ad () {
 
-        if (BuildConfig.FLAVOR.equals("free")){
-            MobileAds.initialize(this, getString(R.string.app_id));
-            mAdView = (AdView) findViewById(R.id.adViewMain);
-            // .addTestDevice("7A0D79165612DC5BE550C1D65C05EEBC")
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
-        }
+
+    }
+
+    public void ad2() {
+
+
     }
 
 

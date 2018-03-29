@@ -36,10 +36,11 @@
 
 
     <LinearLayout
-        android:layout_weight="5"
+        android:layout_weight="4.5"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:orientation="vertical">
+
     <Button
         android:id="@+id/chooseMeditationScreenButton"
         android:background="@drawable/knaphvordanmeditereman"
@@ -54,21 +55,6 @@
         android:layout_margin="10dp"
         android:layout_marginTop="22dp"
         />
-
-
-        <com.google.android.gms.ads.AdView
-
-            android:layout_gravity="end|bottom"
-            android:id="@+id/adViewMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id">
-
-        </com.google.android.gms.ads.AdView>
-
-
-
 
     <Button
         android:id="@+id/chooseHowToMeditateScreenButton"
@@ -103,5 +89,18 @@
 
         
     </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+
+        android:layout_gravity="end|bottom"
+        android:id="@+id/mAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/mainActivityBanner">
+
+    </com.google.android.gms.ads.AdView>
+
+
 
 </LinearLayout>

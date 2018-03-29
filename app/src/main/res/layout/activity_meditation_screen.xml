@@ -13,38 +13,38 @@
 
 
 
-        <TextView
-            android:layout_weight="1.5"
-            android:id="@+id/headline"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:typeface="serif"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="34sp"/>
+    <TextView
+        android:layout_weight="1.5"
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:typeface="serif"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="34sp"/>
 
 
 
-        <ImageView
-            android:layout_weight="4.5"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:src="@drawable/logoet2min"/>
+    <ImageView
+        android:layout_weight="4.5"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:src="@drawable/logoet2min"/>
 
 
 
-        <TextView
-            android:layout_weight="3"
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_marginBottom="@dimen/standardPadding"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:background="@color/transparentBlack"/>
+    <TextView
+        android:layout_weight="3"
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginBottom="@dimen/standardPadding"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/transparentBlack"/>
 
 
 

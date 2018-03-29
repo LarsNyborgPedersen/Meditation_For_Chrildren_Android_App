@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ChooseMeditationScreen extends AppCompatActivity {
+public abstract class ChooseMeditationScreenBase extends AppCompatActivity {
 
 
     Button visualizationButton, bodyScan7MinButton, bodyScan13MinButton, lovingKindnessButton, rhythmicBreathing5MinButton, rhythmicBreathing10MinButton, rhythmicBreathing15MinButton, rhythmicBreathing20MinButton;
     public static String whichMeditation;
+
 
 
 
@@ -21,6 +22,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
 
         getUIButtons();
         callBackMethods();
+        ad();
     }
 
     public void getUIButtons(){
@@ -36,7 +38,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
         rhythmicBreathing20MinButton = (Button)findViewById(R.id.rhythmicBreathing20MinButton);
     }
 
-    public void callBackMethods(){
+    public void callBackMethods() {
 
         //Use buttons to choose MeditationScreen meditation
 
@@ -44,7 +46,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "visualization";
                 startActivity(newScreen);
 
@@ -55,7 +57,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "bodyScan7Min";
                 startActivity(newScreen);
 
@@ -67,7 +69,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "bodyScan13Min";
                 startActivity(newScreen);
 
@@ -78,7 +80,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "lovingKindness";
                 startActivity(newScreen);
 
@@ -89,7 +91,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "rhythmicBreathing5Min";
                 startActivity(newScreen);
 
@@ -100,7 +102,7 @@ public class ChooseMeditationScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "rhythmicBreathing10Min";
                 startActivity(newScreen);
 
@@ -108,12 +110,11 @@ public class ChooseMeditationScreen extends AppCompatActivity {
         });
 
 
-
         rhythmicBreathing15MinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "rhythmicBreathing15Min";
                 startActivity(newScreen);
 
@@ -121,25 +122,24 @@ public class ChooseMeditationScreen extends AppCompatActivity {
         });
 
 
-
         rhythmicBreathing20MinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent newScreen = new Intent(ChooseMeditationScreen.this, MeditationScreen.class);
+                Intent newScreen = new Intent(ChooseMeditationScreenBase.this, MeditationScreen.class);
                 whichMeditation = "rhythmicBreathing20Min";
                 startActivity(newScreen);
 
             }
         });
+    }
 
-
-
-
+    public void ad() {
 
 
     }
 
-
-
 }
+
+
+
